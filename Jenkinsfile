@@ -19,7 +19,7 @@ pipeline {
         stage('checkout') {
             steps {
                  script{
-                       // dir("")
+                        dir("aws-packer")
                         {
                             git "https://github.com/ishaqmdgcp/aws-packer.git"
                         }
