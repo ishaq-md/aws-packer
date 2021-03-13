@@ -12,16 +12,16 @@ pipeline {
         AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     }
-
+    
    agent  any
   
     stages {
         stage('checkout') {
             steps {
                  script{
-                        dir("aws-packer")
+                        dir("ec2")
                         {
-                            git "https://github.com/ishaqmdgcp/aws-packer.git"
+                            "https://github.com/ishaqmdgcp/aws-packer.git"
                         }
                     }
                 }
