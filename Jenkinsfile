@@ -29,7 +29,7 @@ pipeline {
 
          stage('packer inspect') {
             steps {
-               // dir("") 
+               dir("") 
                 {
                 sh 'packer inspect aws.json'
             }
