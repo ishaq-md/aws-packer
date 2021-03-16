@@ -5,7 +5,6 @@
   "vpc_region": "${vpc_region}",
 },
 
-{
 	"builders": [
 		{
 	"type":"amazon-ebs",
