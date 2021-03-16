@@ -20,6 +20,13 @@ pipeline {
                 sh 'packer inspect aws.json'
             }
     }
+             
+         stage('packer build') {
+           steps {
+               
+                sh 'packer build aws.json'
+            }
+    }
 
   }
 }
