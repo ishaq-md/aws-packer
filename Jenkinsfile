@@ -6,26 +6,19 @@ pipeline {
     }
     
    agent  any
-  
-    stages {
-        stage('checkout') {
+     
+      stages {
+        stage ('checkout'){
             steps {
-                 script {
-                        dir("aws-packer")
-                        {
-                            "https://github.com/ishaqmdgcp/aws-packer.git"
-                        }
-                    }
-                }
+                git branch: 'main', url: 'https://github.com/ishaqmdgcp/gcp-packer.git'
             }
+        }
 
          stage('packer inspect') {
             steps {
-               dir("") 
-                {
+            
                 sh 'packer inspect aws.json'
             }
-        }
     }
 
   }
