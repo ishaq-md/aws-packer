@@ -16,7 +16,7 @@ pipeline {
 
          stage('packer inspect') {
             steps {
-            
+                sh 'packer version'
                 sh 'packer inspect aws.json'
             }
     }
