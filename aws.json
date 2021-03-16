@@ -1,8 +1,8 @@
 {
 	"builders": [
 		{
-	"access_key": "${AWS_ACCESS_KEY_ID}",
-      	"secret_key": "${AWS_SECRET_ACCESS_KEY}",
+	"access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+      	"secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
 	"type":"amazon-ebs",
 	"region": "us-east-1",
 	"source_ami": "ami-042e8287309f5df03",
